@@ -1,5 +1,8 @@
 <template>
-  <div>Graph Page</div>
+  <div><p class= "tab text-blue-800 ">Graph Page<br>
+<br>In this page you will see your progress through time. 
+
+</p></div>
 </template>
 
 <script>
