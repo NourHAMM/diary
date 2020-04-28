@@ -2,7 +2,9 @@
   <div>
      <h4 class= "flex text-blue-800 font-bold text-xl "><br><br>To Paradise Welcomes You!</h4>
     <p class= "tab text-blue-800 "><br>We are excited to serve you!
-    <br><br>Our site is for you to use on your journey in life. 
+    <img class="object-contain h-48  object-left-top " src=../assets/img/yhankful/1t.png>
+
+    Our site is for you to use on your journey in life. 
      <br>The big goal in our site is to help you track your lifes simple goals and to help motivate you to do better.
      <br>The goals you will track are tracking your good deeds, keeping a grateful for diary, tracking your reading.
      <br>Besides tracking your goal we also try to keep you motivated in the motivation page.  <br>

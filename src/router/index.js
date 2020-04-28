@@ -6,6 +6,11 @@ import grateful from "../views/grateful.vue";
 import reading from "../views/reading.vue";
 import motivation from "../views/motivation.vue";
 import graph from "../views/graph.vue";
+import Add from '../views/Add.vue';
+import Edit from '../views/Edit.vue';
+
+
+
 
 Vue.use(VueRouter);
 
@@ -39,7 +44,18 @@ const routes = [
     path: "/graph",
     name: "graph",
     component: graph
+  },
+  {
+    path: '/Add',
+    name: 'Add',
+    component: Add
+  },
+  {
+    path: '/edit',
+    name: 'Edit',
+    component: Edit
   }
+  
 ];
 
 const router = new VueRouter({
