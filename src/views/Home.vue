@@ -1,8 +1,8 @@
 <template>
   <div>
-     <h4 class= "flex text-blue-800 font-bold text-xl "><br><br>To Paradise Welcomes You!</h4>
+     <h4 class= "flex text-blue-800  font-bold text-xl text-center"><br><br>To Paradise Welcomes You!</h4>
     <p class= "tab text-blue-800 "><br>We are excited to serve you!
-    <img class="object-contain h-48  object-left-top " src=../assets/img/yhankful/1t.png>
+    <img class="object-contain h-48 object-left-top " src=../assets/img/yhankful/1t.png>
 
     Our site is for you to use on your journey in life. 
      <br>The big goal in our site is to help you track your lifes simple goals and to help motivate you to do better.
@@ -18,13 +18,18 @@
    <br> We will provide slots for you to enter your book information. 
    <br><br>The fourth page will be a page that will provide quotes to keep you motivated on your lifes journey. 
    <br><br>The last page will keep track of all the logs you make. This page will graph your progress. 
-   <br><br>We hope you enjoy your electronic diary!
+   <br><br>We hope you enjoy your electronic diary!<br><br><br><br><br><br>
     </p>
   </div>
 </template>
 
 <script>
+
 export default {
-  name: "Home"
+  name: "Home",
+  
 };
+
+
+
 </script>

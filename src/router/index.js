@@ -6,8 +6,9 @@ import grateful from "../views/grateful.vue";
 import reading from "../views/reading.vue";
 import motivation from "../views/motivation.vue";
 import graph from "../views/graph.vue";
-import Add from '../views/Add.vue';
-import Edit from '../views/Edit.vue';
+
+import Login from '../views/Login.vue';
+import store from '../store'
 
 
 
@@ -18,50 +19,72 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: Home
+    component: Home,
+    meta: { requiresAuth: true }
   },
   {
     path: "/gooddeed",
     name: "gooddeed",
-    component: gooddeed
+    component: gooddeed,
+    meta: { requiresAuth: true }
   },
   {
     path: "/grateful",
     name: "grateful",
-    component: grateful
+    component: grateful,
+    meta: { requiresAuth: true }
   },
   {
     path: "/reading",
     name: "reading",
-    component: reading
+    component: reading,
+    meta: { requiresAuth: true }
   },
   {
     path: "/motivation",
     name: "motivation",
-    component: motivation
+    component: motivation,
+    meta: { requiresAuth: true }
   },
   {
     path: "/graph",
     name: "graph",
-    component: graph
+    component: graph,
+    meta: { requiresAuth: true }
   },
+ 
+
   {
-    path: '/Add',
-    name: 'Add',
-    component: Add
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
-  {
-    path: '/edit',
-    name: 'Edit',
-    component: Edit
-  }
+ 
+ 
   
 ];
 
+
+
+
+
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
-});
+})
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (!store.getters.getUser) {
+      next({ path: '/' })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
+
+
 
 export default router;

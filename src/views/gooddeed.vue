@@ -1,31 +1,16 @@
 <template>
-  <div class="flex flex-wrap justify-center pt-8">
-    <Card v-for="note in notes" :key="note.id" :note="note" /> 
-    <router-link class="cursor-pointer bg-white h-12 w-full m-4 rounded-lg shadow hover:shadow-lg flex justify-center items-center hover:bg-gray-100" 
-    to='/add'>
-      <div class="bg-white w-8 h-8 flex justify-center items-center rounded-full border-dashed border text-black" >  
-        <span class="text-gray-600">+</span>
-      </div>
-      </router-link>
+  
+  <div ><p class= "text-blue flex justify-center"><br/><br/>Please click the plus sign to add your good deed of the day.</p>
+   
+ 
+    
 
-<img class="object-contain h-48 w-full" src=../assets/img/gooddeeds/6.png>
-  </div>
+<img class="object-contain h-48 w-full" src="../assets/img/gooddeeds/6.png">
+ 
+  </div >
 </template>
 
-<script>
-import Card from '../components/Card'
 
-export default {
-  name: 'App',
-  components: {
-    Card
-  },
-  computed:{
-    notes() {
-      return this.$store.getters.getNotes
-    }
-  }
-}
-</script>
+
 
 <style></style>

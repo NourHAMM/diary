@@ -9,7 +9,8 @@
 
 <script>
 export default {
-  name: "grateful"
+  name: "grateful",
+  
 };
 </script>
 

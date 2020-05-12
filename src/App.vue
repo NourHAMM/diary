@@ -2,6 +2,7 @@
   <div class="bg-blue-200 min-h-screen">
     <NavBar />
     <router-view />
+    
   </div>
 </template>
 

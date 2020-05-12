@@ -7,34 +7,27 @@ export default new Vuex.Store({
 
   state: {
 
-    notes: []
+    user: ''
 
   },
 
   getters: {
 
-    getNotes: state => state.notes.reverse(),
-
-    getNote: state => id => state.notes.find(note => note.id === id)
+    getUser: state => state.user
 
   },
 
   mutations: {
 
-    addingNote: (state, newNote) => state.notes.push(newNote),
-
-    removingNote: (state, id) =>
-
-      (state.notes = state.notes.filter(note => note.id != id))
+    settingUser: (state, user) => (state.user = user)
 
   },
 
   actions: {
 
-    addNote: ({ commit }, newNote) => commit('addingNote', newNote),
-
-    removeNote: ({ commit }, id) => commit('removingNote', id)
+    setUser: ({ commit }, user) => commit('settingUser', user)
 
   }
 
 })
+
